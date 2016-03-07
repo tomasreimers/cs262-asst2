@@ -42,3 +42,5 @@
  - Okay, looks like it's working... Will need more tests.
     - Cool stuff! Observing that on slower systems, the queue accumulates and
       then the LC falls behind.
+
+- small changes to observe procesor speeds of vms and which process VMs send messages to WX

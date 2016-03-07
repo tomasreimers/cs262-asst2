@@ -42,26 +42,23 @@ class VM(object):
                 self.logical_clock = max(message, self.logical_clock) + 1
                 self.log("Message received, Queue still has " + str(len(self.messages)) + " messages")
             else:
-
-                #
-                # TODO : Do we update the logical clock before or after the send?
-                #
-
-                # no messages, increment logical clock
-                self.logical_clock += 1
-
                 # roll to figure out instruction
                 roll = random.randint(1, 10)
                 if (roll == 1):
                     self.VM1.messages.append(self.logical_clock)
-                    self.log("Sent message to 1")
-                if (roll == 2):
+                    self.log("Sent message to " + self.VM1.name)
+                elif (roll == 2):
                     self.VM2.messages.append(self.logical_clock)
-                    self.log("Sent message to 2")
-                if (roll == 3):
+                    self.log("Sent message to " + self.VM2.name)
+                elif (roll == 3):
                     self.VM1.messages.append(self.logical_clock)
                     self.VM2.messages.append(self.logical_clock)
-                    self.log("Sent message to 3")
+                    self.log("Sent message to both")
+                else:
+                    self.log("Internal event")
+
+                # no messages, increment logical clock
+                self.logical_clock += 1                
 
             # sleep for remaining amount of time
             time_taken = time.time() - started
@@ -73,23 +70,31 @@ class VM(object):
 # main thread of execution
 if __name__ == "__main__":
     # create VMs
-    v1 = VM("VM 1")
-    v2 = VM("VM 2")
-    v3 = VM("VM 3")
-
+    v1 = VM("VM1")
+    v2 = VM("VM2")
+    v3 = VM("VM3")
+    
     # set up the threads
     v1.registerVM1(v2)
     v1.registerVM2(v3)
-    v1.setClockSpeed(random.randint(1, 6))
+    v1_clock_speed = random.randint(1,6)
+    v1.setClockSpeed(v1_clock_speed)
 
     v2.registerVM1(v1)
     v2.registerVM2(v3)
-    v2.setClockSpeed(random.randint(1, 6))
+    v2_clock_speed = random.randint(1,6)
+    v2.setClockSpeed(v2_clock_speed)
 
     v3.registerVM1(v1)
     v3.registerVM2(v2)
-    v3.setClockSpeed(random.randint(1, 6))
+    v3_clock_speed = random.randint(1,6)
+    v3.setClockSpeed(v3_clock_speed)
 
+    print ("Clock Speeds: ["
+        + "VM1: " + str(v1_clock_speed) 
+        + " | VM2: " + str(v2_clock_speed) 
+        + " | VM3: " + str(v3_clock_speed) + "]")
+    
     # on your mark, get set, go!
     t1 = threading.Thread(target=v1.execution)
     t2 = threading.Thread(target=v2.execution)

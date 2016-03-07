@@ -1,0 +1,4 @@
+- sanity checking experiments
+    running on willy1 willy2
+    to verify the # of actions: cat willy1 | grep "VM1 " | wc -l
+    

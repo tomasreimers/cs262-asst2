@@ -1,4 +1,6 @@
 - sanity checking experiments
     running on willy1 willy2
     to verify the # of actions: cat willy1 | grep "VM1 " | wc -l
-    
+
+RE-WRITE THE CODE ON 03/08 as per Waldo's claim that we have to "simulate" two processes.
+

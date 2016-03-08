@@ -2,6 +2,10 @@ import multiprocessing as mp
 import Queue
 import time
 import random
+import sys
+
+# told to run > 60 seconds
+DEFAULT_EXPERIMENT_TIME = 90
 
 # VM Objects
 class VM(object):
@@ -114,3 +118,15 @@ if __name__ == "__main__":
     p1.start()
     p2.start()
     p3.start()
+    
+    # user can optionally pass in number of seconds for experiment
+    experiment_time = DEFAULT_EXPERIMENT_TIME if len(sys.argv) < 2 else sys.argv[1]
+    time.sleep(int(experiment_time))
+    
+    p1.terminate()
+    p2.terminate()
+    p3.terminate()
+    
+    p1.join()
+    p2.join()
+    p3.join()

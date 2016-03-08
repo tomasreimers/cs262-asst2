@@ -42,6 +42,7 @@ class VM(object):
             # simulate a thread to read messages
             while self.time_for_instruction > (time.time() - started):
                 try:
+                    # exit either when there's a message to be processed or it's time for another command
                     message = self.Q.get(True, self.time_for_instruction - (time.time() - started))
                     self.messages.append(message)
                 except Queue.Empty:

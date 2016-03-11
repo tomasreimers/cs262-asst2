@@ -32,7 +32,8 @@ class VM(object):
 
     def log(self, message):
         print "[" + self.name + " | time: " + str(time.time()) + ", lc:" + str(self.logical_clock) + "] " + message
-
+        sys.stdout.flush()
+        
     def execution(self):
         #
         # TODO : Consider adding a barrier here (https://docs.oracle.com/cd/E19120-01/open.solaris/816-5137/gfwek/index.html)
@@ -67,7 +68,7 @@ class VM(object):
 
                 # no messages, increment logical clock
                 self.logical_clock += 1
-                
+            
             # simulate a thread to read messages
             while self.time_for_instruction > (time.time() - started):
                 try:

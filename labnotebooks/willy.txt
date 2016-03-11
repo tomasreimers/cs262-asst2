@@ -2,5 +2,87 @@
     running on willy1 willy2
     to verify the # of actions: cat willy1 | grep "VM1 " | wc -l
 
-RE-WRITE THE CODE ON 03/08 as per Waldo's claim that we have to "simulate" two processes.
+- RE-WRITE THE CODE ON 03/08 as per Waldo's claim that we have to "simulate" two processes.
 
+- Running experiments 6 times, piping all of the output to ./labnotebooks/experiments/willy{1-6}.
+
+    Observations:
+        Noticing if clock speeds are the same then it's okay (experiment 1). 
+        In experiment 2 one clock is substantially (5x) faster than the other two, this doesn't lead to a lot of drift, because the faster clock is not completely overwhelming the other two machines (b/c it doesn't send that many messages, hypothesis is that if there are two fast clocks and a slow one, the slow one will be overwhelmed).
+        3-5 provide roughly the same output as 1, 5 is interesting to note, because even though there are two clocks that are double the speed of the third, the third is not substantially overwhelmed by the other two, maybe there needs to be a more dramatic difference.
+        Aha! We've found it; in experiment 6 the clock speeds are (5,6,1). Even after 1 minute of running this difference, the last clock has around 75 messages on the queue. While the other two machines are on LC = 538 and LC = 539 by the end, the slow VM is on LC = 282. This makes sense!
+
+- Analyzing summary statistics by hand is difficult and unscientific, so I wrote parse.py to print stats programmatically. Here are the results:
+        willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy1
+        Clock Speeds: [VM1: 4 | VM2: 3 | VM3: 3]
+        Number of ticks:[360, 271, 271]
+        Final LC Values:[360, 361, 358]
+        Biggest gap:[2, 8, 8]
+        Longest queue:[1, 2, 1]
+    
+        willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy2
+        Clock Speeds: [VM1: 5 | VM2: 1 | VM3: 1]
+        Number of ticks:[450, 91, 91]
+        Final LC Values:[450, 427, 426]
+        Biggest gap:[1, 18, 28]
+        Longest queue:[0, 6, 5]
+    
+        willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy3
+        Clock Speeds: [VM1: 4 | VM2: 3 | VM3: 2]
+        Number of ticks:[360, 271, 180]
+        Final LC Values:[360, 359, 355]
+        Biggest gap:[2, 8, 12]
+        Longest queue:[1, 1, 2]
+    
+        willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy4
+        Clock Speeds: [VM1: 3 | VM2: 6 | VM3: 6]
+        Number of ticks:[271, 539, 539]
+        Final LC Values:[540, 539, 540]
+        Biggest gap:[9, 2, 2]
+        Longest queue:[2, 0, 1]
+    
+        willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy5
+        Clock Speeds: [VM1: 2 | VM2: 3 | VM3: 6]
+        Number of ticks:[181, 271, 539]
+        Final LC Values:[537, 540, 539]
+        Biggest gap:[14, 13, 2]
+        Longest queue:[3, 1, 0]
+    
+        willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy6
+        Clock Speeds: [VM1: 5 | VM2: 6 | VM3: 1]
+        Number of ticks:[450, 539, 91]
+        Final LC Values:[538, 539, 282]
+        Biggest gap:[5, 2, 17]
+        Longest queue:[1, 0, 75]
+
+    As expected, the gaps (ie jumps) are larger in the clocks that run slower.
+
+- To test this hypothesis that 2 fast clocks overwhelm a slow clock and that one fast clock doesn't have a detrimental effect on the 'system' I will run the following:
+    Clock speeds: [VM1: 6 | VM2: 1 | VM3: 1] and Clock speeds:  [VM1: 6 | VM2: 6 | VM3: 1]
+    
+    Here are the summary stats:
+        TWO SLOW TEST:
+            Clock Speeds: [VM1: 6 | VM2: 1 | VM3: 1]
+            Number of ticks:[539, 91, 90]
+            Final LC Values:[539, 409, 455]
+            Biggest gap:[2, 19, 24]
+            Longest queue:[0, 27, 17]
+
+        ONE SLOW TEST: 
+            Clock Speeds: [VM1: 6 | VM2: 6 | VM3: 1]
+            Number of ticks:[539, 539, 91]
+            Final LC Values:[539, 539, 289]
+            Biggest gap:[2, 2, 12]
+            Longest queue:[1, 0, 94]
+    
+    The result looks like the two slow test has maybe even more gaps than the one slow test, but the queue doesn't get quite as long as the one slow test. In the one slow test the results are intuitive, which is the slower machine gets overwhelmed even in a minute and will certainly fall out of the system or need to be 'fixed'. 
+    I wonder if we run the TWO SLOW TEST again for longer (maybe 3 minutes instead of 80 seconds) if the VM2 and VM3 will just crash and burn or if it stabilizes at their current queue lengths.
+    
+    Here's the result again for TWO SLOW TEST running for three minutes:
+        Clock Speeds: [VM1: 6 | VM2: 1 | VM3: 1]
+        Number of ticks:[1078, 180, 180]
+        Final LC Values:[1078, 951, 927]
+        Biggest gap:[1, 24, 25]
+        Longest queue:[0, 25, 30]
+    
+    The two longest queues happen to be about the same length as they were in the first iteration of this experiment in shorter time. So it looks like our system won't get 'overwhelmed' by the fast clock.

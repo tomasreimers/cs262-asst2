@@ -1,3 +1,6 @@
+CS262 Assignment 2 -- Willy Xiao and Tomas Reimers.
+Github: https://github.com/tomasreimers/cs262-asst2
+
 [March 6, 2016]
  - First idea is to implement each of the VMs as a thread with an associated
    global message queue (that other threads can append to) and a lock.

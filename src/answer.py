@@ -1,30 +1,39 @@
-import threading
+import multiprocessing as mp
+import Queue
 import time
 import random
+import sys
+
+# told to run > 60 seconds
+DEFAULT_EXPERIMENT_TIME = 90
 
 # VM Objects
 class VM(object):
-    def __init__(self, name):
+    def __init__(self, name, queue):
         self.name = name
         # messages are simply logical clock times
-        self.messages = [] # python lists are thread safe, so no lock needed
-        self.VM1 = None
-        self.VM2 = None
+        self.messages = []
+
+        self.Q = queue
+        self.VM1Q = None
+        self.VM2Q = None
+
         self.time_for_instruction = None
         self.logical_clock = 1
 
-    def registerVM1(self, vm):
-        self.VM1 = vm
+    def registerVM1Queue(self, vm_queue):
+        self.VM1Q = vm_queue
 
-    def registerVM2(self, vm):
-        self.VM2 = vm
+    def registerVM2Queue(self, vm_queue):
+        self.VM2Q = vm_queue
 
     def setClockSpeed(self, cs):
         self.time_for_instruction = 1. / cs
 
     def log(self, message):
         print "[" + self.name + " | time: " + str(time.time()) + ", lc:" + str(self.logical_clock) + "] " + message
-
+        sys.stdout.flush()
+        
     def execution(self):
         #
         # TODO : Consider adding a barrier here (https://docs.oracle.com/cd/E19120-01/open.solaris/816-5137/gfwek/index.html)
@@ -35,74 +44,90 @@ class VM(object):
             # figure out how long the instruction took
             started = time.time()
 
-            # see if any messages in the queue
+            # simulate a thread to process message or take an action
             if (len(self.messages) > 0):
                 # there exist messages
                 message = self.messages.pop(0)
                 self.logical_clock = max(message, self.logical_clock) + 1
                 self.log("Message received, Queue still has " + str(len(self.messages)) + " messages")
             else:
-
-                #
-                # TODO : Do we update the logical clock before or after the send?
-                #
-
-                # no messages, increment logical clock
-                self.logical_clock += 1
-
                 # roll to figure out instruction
                 roll = random.randint(1, 10)
                 if (roll == 1):
-                    self.VM1.messages.append(self.logical_clock)
+                    self.VM1Q.put(self.logical_clock)
                     self.log("Sent message to 1")
-                if (roll == 2):
-                    self.VM2.messages.append(self.logical_clock)
+                elif (roll == 2):
+                    self.VM2Q.put(self.logical_clock)
                     self.log("Sent message to 2")
-                if (roll == 3):
-                    self.VM1.messages.append(self.logical_clock)
-                    self.VM2.messages.append(self.logical_clock)
-                    self.log("Sent message to 3")
+                elif (roll == 3):
+                    self.VM1Q.put(self.logical_clock)
+                    self.VM2Q.put(self.logical_clock)
+                    self.log("Sent message to both")
+                else:
+                    self.log("Internal event")
 
-            # sleep for remaining amount of time
-            time_taken = time.time() - started
-            time_remaining = self.time_for_instruction - time_taken
-            if time_remaining > 0:
-                time.sleep(time_remaining)
-
+                # no messages, increment logical clock
+                self.logical_clock += 1
+            
+            # simulate a thread to read messages
+            while self.time_for_instruction > (time.time() - started):
+                try:
+                    # always recalculate time left from scratch
+                    message = self.Q.get(True, self.time_for_instruction - (time.time() - started))
+                    self.messages.append(message)
+                except Queue.Empty:
+                    break
 
 # main thread of execution
 if __name__ == "__main__":
+    # create Queues for each VM to read from
+    queue1 = mp.Queue()
+    queue2 = mp.Queue()
+    queue3 = mp.Queue()
+
     # create VMs
-    v1 = VM("VM 1")
-    v2 = VM("VM 2")
-    v3 = VM("VM 3")
-
+    v1 = VM("VM1", queue1)
+    v2 = VM("VM2", queue2)
+    v3 = VM("VM3", queue3)
+    
     # set up the threads
-    v1.registerVM1(v2)
-    v1.registerVM2(v3)
-    v1.setClockSpeed(random.randint(1, 6))
+    v1.registerVM1Queue(queue2)
+    v1.registerVM2Queue(queue3)
+    v1_clock_speed = random.randint(1,6)
+    v1.setClockSpeed(v1_clock_speed)
 
-    v2.registerVM1(v1)
-    v2.registerVM2(v3)
-    v2.setClockSpeed(random.randint(1, 6))
+    v2.registerVM1Queue(queue1)
+    v2.registerVM2Queue(queue3)
+    v2_clock_speed = random.randint(1,6)
+    v2.setClockSpeed(v2_clock_speed)
 
-    v3.registerVM1(v1)
-    v3.registerVM2(v2)
-    v3.setClockSpeed(random.randint(1, 6))
+    v3.registerVM1Queue(queue1)
+    v3.registerVM2Queue(queue2)
+    v3_clock_speed = random.randint(1,6)
+    v3.setClockSpeed(v3_clock_speed)
 
+    print ("Clock Speeds: ["
+        + "VM1: " + str(v1_clock_speed) 
+        + " | VM2: " + str(v2_clock_speed) 
+        + " | VM3: " + str(v3_clock_speed) + "]")
+    
     # on your mark, get set, go!
-    t1 = threading.Thread(target=v1.execution)
-    t2 = threading.Thread(target=v2.execution)
-    t3 = threading.Thread(target=v3.execution)
-
-    t1.setDaemon(True)
-    t2.setDaemon(True)
-    t3.setDaemon(True)
-
-    t1.start()
-    t2.start()
-    t3.start()
-
-    # wait for them all -- not joining so ctrl-C remains active
-    while threading.active_count() > 0:
-        time.sleep(0.1)
+    p1 = mp.Process(target=v1.execution)
+    p2 = mp.Process(target=v2.execution)
+    p3 = mp.Process(target=v3.execution)
+    
+    p1.start()
+    p2.start()
+    p3.start()
+    
+    # user can optionally pass in number of seconds for experiment
+    experiment_time = DEFAULT_EXPERIMENT_TIME if len(sys.argv) < 2 else sys.argv[1]
+    time.sleep(int(experiment_time))
+    
+    p1.terminate()
+    p2.terminate()
+    p3.terminate()
+    
+    p1.join()
+    p2.join()
+    p3.join()

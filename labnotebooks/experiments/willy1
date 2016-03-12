@@ -1,0 +1,903 @@
+Clock Speeds: [VM1: 4 | VM2: 3 | VM3: 3]
+[VM1 | time: 1457728526.34, lc:1] Internal event
+[VM3 | time: 1457728526.34, lc:1] Internal event
+[VM2 | time: 1457728526.34, lc:1] Sent message to 2
+[VM1 | time: 1457728526.59, lc:2] Sent message to 1
+[VM2 | time: 1457728526.67, lc:3] Message received, Queue still has 0 messages
+[VM3 | time: 1457728526.67, lc:3] Message received, Queue still has 0 messages
+[VM1 | time: 1457728526.84, lc:3] Sent message to 2
+[VM2 | time: 1457728527.01, lc:3] Sent message to 2
+[VM3 | time: 1457728527.01, lc:4] Message received, Queue still has 1 messages
+[VM1 | time: 1457728527.09, lc:4] Internal event
+[VM2 | time: 1457728527.34, lc:4] Internal event
+[VM1 | time: 1457728527.34, lc:5] Sent message to 2
+[VM3 | time: 1457728527.34, lc:5] Message received, Queue still has 1 messages
+[VM1 | time: 1457728527.59, lc:6] Internal event
+[VM2 | time: 1457728527.67, lc:5] Internal event
+[VM3 | time: 1457728527.68, lc:6] Message received, Queue still has 0 messages
+[VM1 | time: 1457728527.84, lc:7] Internal event
+[VM2 | time: 1457728528.01, lc:6] Sent message to 1
+[VM3 | time: 1457728528.01, lc:6] Internal event
+[VM1 | time: 1457728528.09, lc:9] Message received, Queue still has 0 messages
+[VM2 | time: 1457728528.34, lc:7] Internal event
+[VM3 | time: 1457728528.34, lc:7] Internal event
+[VM1 | time: 1457728528.34, lc:9] Sent message to both
+[VM1 | time: 1457728528.59, lc:10] Internal event
+[VM2 | time: 1457728528.67, lc:10] Message received, Queue still has 0 messages
+[VM3 | time: 1457728528.68, lc:10] Message received, Queue still has 0 messages
+[VM1 | time: 1457728528.84, lc:11] Internal event
+[VM2 | time: 1457728529.01, lc:10] Internal event
+[VM3 | time: 1457728529.01, lc:10] Internal event
+[VM1 | time: 1457728529.09, lc:12] Internal event
+[VM2 | time: 1457728529.34, lc:11] Sent message to 1
+[VM3 | time: 1457728529.34, lc:11] Internal event
+[VM1 | time: 1457728529.34, lc:14] Message received, Queue still has 0 messages
+[VM1 | time: 1457728529.59, lc:14] Sent message to 1
+[VM2 | time: 1457728529.67, lc:15] Message received, Queue still has 0 messages
+[VM3 | time: 1457728529.68, lc:12] Internal event
+[VM1 | time: 1457728529.84, lc:15] Sent message to 1
+[VM2 | time: 1457728530.01, lc:16] Message received, Queue still has 0 messages
+[VM3 | time: 1457728530.01, lc:13] Sent message to both
+[VM1 | time: 1457728530.09, lc:17] Message received, Queue still has 0 messages
+[VM2 | time: 1457728530.34, lc:17] Message received, Queue still has 0 messages
+[VM3 | time: 1457728530.34, lc:14] Sent message to both
+[VM1 | time: 1457728530.34, lc:18] Message received, Queue still has 0 messages
+[VM1 | time: 1457728530.59, lc:18] Internal event
+[VM2 | time: 1457728530.68, lc:18] Message received, Queue still has 0 messages
+[VM3 | time: 1457728530.68, lc:15] Internal event
+[VM1 | time: 1457728530.85, lc:19] Sent message to both
+[VM2 | time: 1457728531.01, lc:20] Message received, Queue still has 0 messages
+[VM3 | time: 1457728531.01, lc:20] Message received, Queue still has 0 messages
+[VM1 | time: 1457728531.1, lc:20] Internal event
+[VM2 | time: 1457728531.34, lc:20] Sent message to 1
+[VM3 | time: 1457728531.34, lc:20] Internal event
+[VM1 | time: 1457728531.35, lc:22] Message received, Queue still has 0 messages
+[VM1 | time: 1457728531.6, lc:22] Internal event
+[VM2 | time: 1457728531.68, lc:21] Sent message to 1
+[VM3 | time: 1457728531.68, lc:21] Internal event
+[VM1 | time: 1457728531.85, lc:24] Message received, Queue still has 0 messages
+[VM2 | time: 1457728532.01, lc:22] Internal event
+[VM3 | time: 1457728532.01, lc:22] Internal event
+[VM1 | time: 1457728532.1, lc:24] Internal event
+[VM2 | time: 1457728532.34, lc:23] Sent message to 2
+[VM3 | time: 1457728532.35, lc:24] Message received, Queue still has 0 messages
+[VM1 | time: 1457728532.35, lc:25] Internal event
+[VM1 | time: 1457728532.6, lc:26] Internal event
+[VM2 | time: 1457728532.68, lc:24] Sent message to 1
+[VM3 | time: 1457728532.68, lc:24] Sent message to 1
+[VM1 | time: 1457728532.85, lc:28] Message received, Queue still has 1 messages
+[VM2 | time: 1457728533.01, lc:25] Internal event
+[VM3 | time: 1457728533.01, lc:25] Internal event
+[VM1 | time: 1457728533.1, lc:29] Message received, Queue still has 0 messages
+[VM2 | time: 1457728533.34, lc:26] Internal event
+[VM3 | time: 1457728533.35, lc:26] Internal event
+[VM1 | time: 1457728533.35, lc:29] Internal event
+[VM1 | time: 1457728533.6, lc:30] Internal event
+[VM2 | time: 1457728533.68, lc:27] Internal event
+[VM3 | time: 1457728533.68, lc:27] Sent message to 2
+[VM1 | time: 1457728533.85, lc:31] Internal event
+[VM3 | time: 1457728534.02, lc:28] Internal event
+[VM2 | time: 1457728534.02, lc:29] Message received, Queue still has 0 messages
+[VM1 | time: 1457728534.1, lc:32] Internal event
+[VM3 | time: 1457728534.35, lc:29] Sent message to 1
+[VM2 | time: 1457728534.35, lc:29] Internal event
+[VM1 | time: 1457728534.35, lc:34] Message received, Queue still has 0 messages
+[VM1 | time: 1457728534.6, lc:34] Sent message to both
+[VM3 | time: 1457728534.68, lc:35] Message received, Queue still has 0 messages
+[VM2 | time: 1457728534.68, lc:35] Message received, Queue still has 0 messages
+[VM1 | time: 1457728534.85, lc:35] Internal event
+[VM3 | time: 1457728535.02, lc:35] Internal event
+[VM2 | time: 1457728535.02, lc:35] Sent message to 2
+[VM1 | time: 1457728535.1, lc:36] Internal event
+[VM3 | time: 1457728535.35, lc:37] Message received, Queue still has 0 messages
+[VM2 | time: 1457728535.35, lc:36] Internal event
+[VM1 | time: 1457728535.36, lc:37] Sent message to both
+[VM1 | time: 1457728535.61, lc:38] Internal event
+[VM3 | time: 1457728535.68, lc:38] Message received, Queue still has 0 messages
+[VM2 | time: 1457728535.68, lc:38] Message received, Queue still has 0 messages
+[VM1 | time: 1457728535.86, lc:39] Internal event
+[VM3 | time: 1457728536.02, lc:38] Sent message to both
+[VM2 | time: 1457728536.02, lc:39] Message received, Queue still has 0 messages
+[VM1 | time: 1457728536.11, lc:41] Message received, Queue still has 0 messages
+[VM3 | time: 1457728536.35, lc:39] Internal event
+[VM2 | time: 1457728536.35, lc:39] Internal event
+[VM1 | time: 1457728536.36, lc:41] Sent message to 1
+[VM1 | time: 1457728536.61, lc:42] Internal event
+[VM3 | time: 1457728536.68, lc:40] Internal event
+[VM2 | time: 1457728536.69, lc:42] Message received, Queue still has 0 messages
+[VM1 | time: 1457728536.86, lc:43] Sent message to 2
+[VM3 | time: 1457728537.02, lc:44] Message received, Queue still has 0 messages
+[VM2 | time: 1457728537.02, lc:42] Sent message to 1
+[VM1 | time: 1457728537.11, lc:45] Message received, Queue still has 0 messages
+[VM3 | time: 1457728537.35, lc:44] Internal event
+[VM2 | time: 1457728537.35, lc:43] Sent message to 2
+[VM1 | time: 1457728537.36, lc:45] Internal event
+[VM1 | time: 1457728537.61, lc:46] Internal event
+[VM3 | time: 1457728537.69, lc:46] Message received, Queue still has 0 messages
+[VM2 | time: 1457728537.69, lc:44] Sent message to 1
+[VM1 | time: 1457728537.86, lc:48] Message received, Queue still has 0 messages
+[VM3 | time: 1457728538.02, lc:46] Sent message to both
+[VM2 | time: 1457728538.02, lc:47] Message received, Queue still has 0 messages
+[VM1 | time: 1457728538.11, lc:49] Message received, Queue still has 0 messages
+[VM3 | time: 1457728538.35, lc:47] Internal event
+[VM2 | time: 1457728538.35, lc:47] Internal event
+[VM1 | time: 1457728538.36, lc:49] Internal event
+[VM1 | time: 1457728538.61, lc:50] Sent message to 1
+[VM3 | time: 1457728538.69, lc:48] Internal event
+[VM2 | time: 1457728538.69, lc:51] Message received, Queue still has 0 messages
+[VM1 | time: 1457728538.86, lc:51] Sent message to both
+[VM3 | time: 1457728539.02, lc:52] Message received, Queue still has 0 messages
+[VM2 | time: 1457728539.02, lc:52] Message received, Queue still has 0 messages
+[VM1 | time: 1457728539.11, lc:52] Internal event
+[VM3 | time: 1457728539.35, lc:52] Internal event
+[VM2 | time: 1457728539.36, lc:52] Sent message to both
+[VM1 | time: 1457728539.36, lc:54] Message received, Queue still has 0 messages
+[VM1 | time: 1457728539.61, lc:54] Sent message to 2
+[VM3 | time: 1457728539.69, lc:54] Message received, Queue still has 1 messages
+[VM2 | time: 1457728539.69, lc:53] Internal event
+[VM1 | time: 1457728539.86, lc:55] Internal event
+[VM3 | time: 1457728540.02, lc:55] Message received, Queue still has 0 messages
+[VM2 | time: 1457728540.02, lc:54] Sent message to 1
+[VM1 | time: 1457728540.11, lc:57] Message received, Queue still has 0 messages
+[VM3 | time: 1457728540.36, lc:55] Sent message to both
+[VM2 | time: 1457728540.36, lc:56] Message received, Queue still has 0 messages
+[VM1 | time: 1457728540.36, lc:58] Message received, Queue still has 0 messages
+[VM1 | time: 1457728540.61, lc:58] Internal event
+[VM3 | time: 1457728540.69, lc:56] Sent message to both
+[VM2 | time: 1457728540.69, lc:57] Message received, Queue still has 0 messages
+[VM1 | time: 1457728540.86, lc:60] Message received, Queue still has 0 messages
+[VM2 | time: 1457728541.02, lc:57] Internal event
+[VM3 | time: 1457728541.02, lc:57] Sent message to both
+[VM1 | time: 1457728541.11, lc:61] Message received, Queue still has 0 messages
+[VM3 | time: 1457728541.36, lc:58] Internal event
+[VM2 | time: 1457728541.36, lc:59] Message received, Queue still has 0 messages
+[VM1 | time: 1457728541.36, lc:61] Sent message to 2
+[VM1 | time: 1457728541.61, lc:62] Sent message to 2
+[VM3 | time: 1457728541.69, lc:62] Message received, Queue still has 1 messages
+[VM2 | time: 1457728541.69, lc:59] Sent message to 1
+[VM1 | time: 1457728541.86, lc:64] Message received, Queue still has 0 messages
+[VM3 | time: 1457728542.02, lc:63] Message received, Queue still has 0 messages
+[VM2 | time: 1457728542.02, lc:60] Internal event
+[VM1 | time: 1457728542.11, lc:64] Internal event
+[VM3 | time: 1457728542.36, lc:63] Internal event
+[VM2 | time: 1457728542.36, lc:61] Sent message to both
+[VM1 | time: 1457728542.37, lc:66] Message received, Queue still has 0 messages
+[VM1 | time: 1457728542.62, lc:66] Internal event
+[VM2 | time: 1457728542.69, lc:62] Internal event
+[VM3 | time: 1457728542.69, lc:65] Message received, Queue still has 0 messages
+[VM1 | time: 1457728542.87, lc:67] Sent message to 2
+[VM2 | time: 1457728543.02, lc:63] Internal event
+[VM3 | time: 1457728543.02, lc:68] Message received, Queue still has 0 messages
+[VM1 | time: 1457728543.12, lc:68] Sent message to 2
+[VM2 | time: 1457728543.36, lc:64] Sent message to 1
+[VM3 | time: 1457728543.36, lc:69] Message received, Queue still has 0 messages
+[VM1 | time: 1457728543.37, lc:70] Message received, Queue still has 0 messages
+[VM1 | time: 1457728543.62, lc:70] Internal event
+[VM2 | time: 1457728543.69, lc:65] Sent message to 1
+[VM3 | time: 1457728543.69, lc:69] Internal event
+[VM1 | time: 1457728543.87, lc:72] Message received, Queue still has 0 messages
+[VM3 | time: 1457728544.02, lc:70] Internal event
+[VM2 | time: 1457728544.02, lc:66] Internal event
+[VM1 | time: 1457728544.12, lc:72] Internal event
+[VM3 | time: 1457728544.36, lc:71] Internal event
+[VM2 | time: 1457728544.36, lc:67] Internal event
+[VM1 | time: 1457728544.37, lc:73] Internal event
+[VM1 | time: 1457728544.62, lc:74] Sent message to both
+[VM3 | time: 1457728544.69, lc:75] Message received, Queue still has 0 messages
+[VM2 | time: 1457728544.69, lc:75] Message received, Queue still has 0 messages
+[VM1 | time: 1457728544.87, lc:75] Internal event
+[VM3 | time: 1457728545.03, lc:75] Internal event
+[VM2 | time: 1457728545.03, lc:75] Internal event
+[VM1 | time: 1457728545.12, lc:76] Internal event
+[VM3 | time: 1457728545.36, lc:76] Internal event
+[VM2 | time: 1457728545.36, lc:76] Internal event
+[VM1 | time: 1457728545.37, lc:77] Internal event
+[VM1 | time: 1457728545.62, lc:78] Sent message to 1
+[VM3 | time: 1457728545.69, lc:77] Internal event
+[VM2 | time: 1457728545.69, lc:79] Message received, Queue still has 0 messages
+[VM1 | time: 1457728545.87, lc:79] Internal event
+[VM3 | time: 1457728546.03, lc:78] Internal event
+[VM2 | time: 1457728546.03, lc:79] Internal event
+[VM1 | time: 1457728546.12, lc:80] Internal event
+[VM3 | time: 1457728546.36, lc:79] Sent message to 1
+[VM2 | time: 1457728546.36, lc:80] Sent message to both
+[VM1 | time: 1457728546.37, lc:82] Message received, Queue still has 1 messages
+[VM1 | time: 1457728546.62, lc:83] Message received, Queue still has 0 messages
+[VM3 | time: 1457728546.69, lc:81] Message received, Queue still has 0 messages
+[VM2 | time: 1457728546.7, lc:81] Internal event
+[VM1 | time: 1457728546.87, lc:83] Sent message to both
+[VM3 | time: 1457728547.03, lc:84] Message received, Queue still has 0 messages
+[VM2 | time: 1457728547.03, lc:84] Message received, Queue still has 0 messages
+[VM1 | time: 1457728547.12, lc:84] Sent message to 1
+[VM3 | time: 1457728547.36, lc:84] Internal event
+[VM2 | time: 1457728547.36, lc:85] Message received, Queue still has 0 messages
+[VM1 | time: 1457728547.37, lc:85] Internal event
+[VM1 | time: 1457728547.62, lc:86] Sent message to 1
+[VM3 | time: 1457728547.69, lc:85] Sent message to both
+[VM2 | time: 1457728547.7, lc:87] Message received, Queue still has 1 messages
+[VM1 | time: 1457728547.87, lc:88] Message received, Queue still has 0 messages
+[VM3 | time: 1457728548.03, lc:86] Sent message to 1
+[VM2 | time: 1457728548.03, lc:88] Message received, Queue still has 0 messages
+[VM1 | time: 1457728548.12, lc:89] Message received, Queue still has 0 messages
+[VM3 | time: 1457728548.36, lc:87] Internal event
+[VM2 | time: 1457728548.37, lc:88] Internal event
+[VM1 | time: 1457728548.37, lc:89] Internal event
+[VM1 | time: 1457728548.62, lc:90] Sent message to both
+[VM3 | time: 1457728548.69, lc:91] Message received, Queue still has 0 messages
+[VM2 | time: 1457728548.7, lc:91] Message received, Queue still has 0 messages
+[VM1 | time: 1457728548.88, lc:91] Sent message to 1
+[VM3 | time: 1457728549.03, lc:91] Internal event
+[VM2 | time: 1457728549.03, lc:92] Message received, Queue still has 0 messages
+[VM1 | time: 1457728549.13, lc:92] Internal event
+[VM3 | time: 1457728549.36, lc:92] Internal event
+[VM2 | time: 1457728549.37, lc:92] Internal event
+[VM1 | time: 1457728549.38, lc:93] Internal event
+[VM1 | time: 1457728549.63, lc:94] Sent message to 1
+[VM3 | time: 1457728549.69, lc:93] Internal event
+[VM2 | time: 1457728549.7, lc:95] Message received, Queue still has 0 messages
+[VM1 | time: 1457728549.88, lc:95] Internal event
+[VM3 | time: 1457728550.03, lc:94] Sent message to 1
+[VM2 | time: 1457728550.03, lc:95] Internal event
+[VM1 | time: 1457728550.13, lc:97] Message received, Queue still has 0 messages
+[VM3 | time: 1457728550.36, lc:95] Internal event
+[VM2 | time: 1457728550.37, lc:96] Internal event
+[VM1 | time: 1457728550.38, lc:97] Internal event
+[VM1 | time: 1457728550.63, lc:98] Sent message to 1
+[VM3 | time: 1457728550.7, lc:96] Internal event
+[VM2 | time: 1457728550.7, lc:99] Message received, Queue still has 0 messages
+[VM1 | time: 1457728550.88, lc:99] Internal event
+[VM3 | time: 1457728551.03, lc:97] Sent message to both
+[VM2 | time: 1457728551.03, lc:100] Message received, Queue still has 0 messages
+[VM1 | time: 1457728551.13, lc:101] Message received, Queue still has 0 messages
+[VM3 | time: 1457728551.36, lc:98] Internal event
+[VM2 | time: 1457728551.37, lc:100] Internal event
+[VM1 | time: 1457728551.38, lc:101] Internal event
+[VM1 | time: 1457728551.63, lc:102] Internal event
+[VM3 | time: 1457728551.7, lc:99] Internal event
+[VM2 | time: 1457728551.7, lc:101] Internal event
+[VM1 | time: 1457728551.88, lc:103] Internal event
+[VM3 | time: 1457728552.03, lc:100] Internal event
+[VM2 | time: 1457728552.03, lc:102] Sent message to 2
+[VM1 | time: 1457728552.13, lc:104] Internal event
+[VM3 | time: 1457728552.36, lc:103] Message received, Queue still has 0 messages
+[VM2 | time: 1457728552.37, lc:103] Sent message to 2
+[VM1 | time: 1457728552.38, lc:105] Sent message to 1
+[VM1 | time: 1457728552.63, lc:106] Sent message to 1
+[VM3 | time: 1457728552.7, lc:104] Message received, Queue still has 0 messages
+[VM2 | time: 1457728552.7, lc:106] Message received, Queue still has 1 messages
+[VM1 | time: 1457728552.88, lc:107] Internal event
+[VM3 | time: 1457728553.03, lc:104] Internal event
+[VM2 | time: 1457728553.03, lc:107] Message received, Queue still has 0 messages
+[VM1 | time: 1457728553.13, lc:108] Sent message to 2
+[VM3 | time: 1457728553.36, lc:109] Message received, Queue still has 0 messages
+[VM2 | time: 1457728553.37, lc:107] Sent message to 1
+[VM1 | time: 1457728553.38, lc:110] Message received, Queue still has 0 messages
+[VM1 | time: 1457728553.63, lc:110] Sent message to both
+[VM3 | time: 1457728553.7, lc:111] Message received, Queue still has 0 messages
+[VM2 | time: 1457728553.7, lc:111] Message received, Queue still has 0 messages
+[VM1 | time: 1457728553.88, lc:111] Internal event
+[VM3 | time: 1457728554.03, lc:111] Internal event
+[VM2 | time: 1457728554.03, lc:111] Internal event
+[VM1 | time: 1457728554.13, lc:112] Sent message to both
+[VM3 | time: 1457728554.36, lc:113] Message received, Queue still has 0 messages
+[VM2 | time: 1457728554.37, lc:113] Message received, Queue still has 0 messages
+[VM1 | time: 1457728554.38, lc:113] Internal event
+[VM1 | time: 1457728554.64, lc:114] Internal event
+[VM3 | time: 1457728554.7, lc:113] Sent message to 1
+[VM2 | time: 1457728554.7, lc:113] Sent message to 1
+[VM1 | time: 1457728554.89, lc:116] Message received, Queue still has 1 messages
+[VM3 | time: 1457728555.03, lc:114] Internal event
+[VM2 | time: 1457728555.04, lc:114] Internal event
+[VM1 | time: 1457728555.14, lc:117] Message received, Queue still has 0 messages
+[VM3 | time: 1457728555.36, lc:115] Internal event
+[VM2 | time: 1457728555.37, lc:115] Sent message to both
+[VM1 | time: 1457728555.39, lc:118] Message received, Queue still has 0 messages
+[VM1 | time: 1457728555.64, lc:118] Sent message to 1
+[VM3 | time: 1457728555.7, lc:117] Message received, Queue still has 0 messages
+[VM2 | time: 1457728555.7, lc:119] Message received, Queue still has 0 messages
+[VM1 | time: 1457728555.89, lc:119] Internal event
+[VM3 | time: 1457728556.03, lc:117] Internal event
+[VM2 | time: 1457728556.04, lc:119] Internal event
+[VM1 | time: 1457728556.14, lc:120] Internal event
+[VM3 | time: 1457728556.36, lc:118] Internal event
+[VM2 | time: 1457728556.37, lc:120] Internal event
+[VM1 | time: 1457728556.39, lc:121] Internal event
+[VM1 | time: 1457728556.64, lc:122] Internal event
+[VM3 | time: 1457728556.7, lc:119] Internal event
+[VM2 | time: 1457728556.7, lc:121] Internal event
+[VM1 | time: 1457728556.89, lc:123] Sent message to both
+[VM3 | time: 1457728557.03, lc:124] Message received, Queue still has 0 messages
+[VM2 | time: 1457728557.04, lc:124] Message received, Queue still has 0 messages
+[VM1 | time: 1457728557.14, lc:124] Internal event
+[VM3 | time: 1457728557.36, lc:124] Sent message to 1
+[VM2 | time: 1457728557.37, lc:124] Internal event
+[VM1 | time: 1457728557.39, lc:126] Message received, Queue still has 0 messages
+[VM1 | time: 1457728557.64, lc:126] Internal event
+[VM3 | time: 1457728557.7, lc:125] Sent message to 2
+[VM2 | time: 1457728557.7, lc:126] Message received, Queue still has 0 messages
+[VM1 | time: 1457728557.89, lc:127] Sent message to 2
+[VM3 | time: 1457728558.03, lc:128] Message received, Queue still has 0 messages
+[VM2 | time: 1457728558.04, lc:126] Sent message to both
+[VM1 | time: 1457728558.14, lc:129] Message received, Queue still has 0 messages
+[VM3 | time: 1457728558.37, lc:129] Message received, Queue still has 0 messages
+[VM2 | time: 1457728558.37, lc:127] Sent message to 1
+[VM1 | time: 1457728558.39, lc:130] Message received, Queue still has 0 messages
+[VM1 | time: 1457728558.64, lc:130] Sent message to 2
+[VM3 | time: 1457728558.7, lc:131] Message received, Queue still has 0 messages
+[VM2 | time: 1457728558.7, lc:128] Internal event
+[VM1 | time: 1457728558.89, lc:131] Internal event
+[VM3 | time: 1457728559.03, lc:131] Sent message to 1
+[VM2 | time: 1457728559.04, lc:129] Sent message to both
+[VM1 | time: 1457728559.14, lc:133] Message received, Queue still has 1 messages
+[VM3 | time: 1457728559.37, lc:133] Message received, Queue still has 0 messages
+[VM2 | time: 1457728559.37, lc:130] Internal event
+[VM1 | time: 1457728559.39, lc:134] Message received, Queue still has 0 messages
+[VM1 | time: 1457728559.64, lc:134] Sent message to 2
+[VM3 | time: 1457728559.7, lc:135] Message received, Queue still has 0 messages
+[VM2 | time: 1457728559.7, lc:131] Internal event
+[VM1 | time: 1457728559.89, lc:135] Sent message to 2
+[VM3 | time: 1457728560.03, lc:136] Message received, Queue still has 0 messages
+[VM2 | time: 1457728560.04, lc:132] Internal event
+[VM1 | time: 1457728560.14, lc:136] Internal event
+[VM3 | time: 1457728560.37, lc:136] Internal event
+[VM2 | time: 1457728560.37, lc:133] Sent message to 1
+[VM1 | time: 1457728560.39, lc:138] Message received, Queue still has 0 messages
+[VM1 | time: 1457728560.64, lc:138] Sent message to 1
+[VM3 | time: 1457728560.7, lc:137] Sent message to 1
+[VM2 | time: 1457728560.7, lc:139] Message received, Queue still has 0 messages
+[VM1 | time: 1457728560.89, lc:140] Message received, Queue still has 0 messages
+[VM3 | time: 1457728561.03, lc:138] Internal event
+[VM2 | time: 1457728561.04, lc:139] Sent message to 1
+[VM1 | time: 1457728561.14, lc:141] Message received, Queue still has 0 messages
+[VM3 | time: 1457728561.37, lc:139] Sent message to 1
+[VM2 | time: 1457728561.37, lc:140] Internal event
+[VM1 | time: 1457728561.39, lc:142] Message received, Queue still has 0 messages
+[VM1 | time: 1457728561.64, lc:142] Internal event
+[VM3 | time: 1457728561.7, lc:140] Internal event
+[VM2 | time: 1457728561.7, lc:141] Internal event
+[VM1 | time: 1457728561.89, lc:143] Internal event
+[VM3 | time: 1457728562.04, lc:141] Internal event
+[VM2 | time: 1457728562.04, lc:142] Internal event
+[VM1 | time: 1457728562.14, lc:144] Internal event
+[VM3 | time: 1457728562.37, lc:142] Sent message to both
+[VM2 | time: 1457728562.37, lc:144] Message received, Queue still has 0 messages
+[VM1 | time: 1457728562.39, lc:146] Message received, Queue still has 0 messages
+[VM1 | time: 1457728562.64, lc:146] Internal event
+[VM3 | time: 1457728562.7, lc:143] Sent message to 2
+[VM2 | time: 1457728562.7, lc:145] Message received, Queue still has 0 messages
+[VM1 | time: 1457728562.89, lc:147] Internal event
+[VM3 | time: 1457728563.04, lc:144] Internal event
+[VM2 | time: 1457728563.04, lc:145] Internal event
+[VM1 | time: 1457728563.15, lc:148] Internal event
+[VM3 | time: 1457728563.37, lc:145] Internal event
+[VM2 | time: 1457728563.37, lc:146] Internal event
+[VM1 | time: 1457728563.4, lc:149] Internal event
+[VM1 | time: 1457728563.65, lc:150] Internal event
+[VM3 | time: 1457728563.7, lc:146] Sent message to 2
+[VM2 | time: 1457728563.7, lc:148] Message received, Queue still has 0 messages
+[VM1 | time: 1457728563.9, lc:151] Sent message to 2
+[VM3 | time: 1457728564.04, lc:152] Message received, Queue still has 0 messages
+[VM2 | time: 1457728564.04, lc:148] Internal event
+[VM1 | time: 1457728564.15, lc:152] Internal event
+[VM3 | time: 1457728564.37, lc:152] Internal event
+[VM2 | time: 1457728564.37, lc:149] Internal event
+[VM1 | time: 1457728564.4, lc:153] Internal event
+[VM1 | time: 1457728564.65, lc:154] Internal event
+[VM3 | time: 1457728564.7, lc:153] Internal event
+[VM2 | time: 1457728564.7, lc:150] Internal event
+[VM1 | time: 1457728564.9, lc:155] Internal event
+[VM3 | time: 1457728565.04, lc:154] Internal event
+[VM2 | time: 1457728565.04, lc:151] Internal event
+[VM1 | time: 1457728565.15, lc:156] Internal event
+[VM3 | time: 1457728565.37, lc:155] Internal event
+[VM2 | time: 1457728565.37, lc:152] Internal event
+[VM1 | time: 1457728565.4, lc:157] Internal event
+[VM1 | time: 1457728565.65, lc:158] Internal event
+[VM3 | time: 1457728565.7, lc:156] Internal event
+[VM2 | time: 1457728565.7, lc:153] Internal event
+[VM1 | time: 1457728565.9, lc:159] Sent message to 2
+[VM3 | time: 1457728566.04, lc:160] Message received, Queue still has 0 messages
+[VM2 | time: 1457728566.04, lc:154] Internal event
+[VM1 | time: 1457728566.15, lc:160] Internal event
+[VM3 | time: 1457728566.37, lc:160] Internal event
+[VM2 | time: 1457728566.37, lc:155] Internal event
+[VM1 | time: 1457728566.4, lc:161] Sent message to 1
+[VM1 | time: 1457728566.65, lc:162] Sent message to both
+[VM2 | time: 1457728566.71, lc:162] Message received, Queue still has 1 messages
+[VM3 | time: 1457728566.71, lc:163] Message received, Queue still has 0 messages
+[VM1 | time: 1457728566.9, lc:163] Internal event
+[VM2 | time: 1457728567.04, lc:163] Message received, Queue still has 0 messages
+[VM3 | time: 1457728567.04, lc:163] Internal event
+[VM1 | time: 1457728567.15, lc:164] Internal event
+[VM2 | time: 1457728567.37, lc:163] Internal event
+[VM3 | time: 1457728567.37, lc:164] Internal event
+[VM1 | time: 1457728567.4, lc:165] Internal event
+[VM1 | time: 1457728567.65, lc:166] Sent message to 1
+[VM3 | time: 1457728567.71, lc:165] Internal event
+[VM2 | time: 1457728567.71, lc:167] Message received, Queue still has 0 messages
+[VM1 | time: 1457728567.9, lc:167] Sent message to both
+[VM3 | time: 1457728568.04, lc:168] Message received, Queue still has 0 messages
+[VM2 | time: 1457728568.04, lc:168] Message received, Queue still has 0 messages
+[VM1 | time: 1457728568.15, lc:168] Internal event
+[VM3 | time: 1457728568.37, lc:168] Internal event
+[VM2 | time: 1457728568.37, lc:168] Internal event
+[VM1 | time: 1457728568.4, lc:169] Sent message to both
+[VM1 | time: 1457728568.65, lc:170] Internal event
+[VM3 | time: 1457728568.71, lc:170] Message received, Queue still has 0 messages
+[VM2 | time: 1457728568.71, lc:170] Message received, Queue still has 0 messages
+[VM1 | time: 1457728568.9, lc:171] Internal event
+[VM3 | time: 1457728569.04, lc:170] Sent message to 2
+[VM2 | time: 1457728569.04, lc:171] Message received, Queue still has 0 messages
+[VM1 | time: 1457728569.16, lc:172] Internal event
+[VM2 | time: 1457728569.37, lc:171] Internal event
+[VM3 | time: 1457728569.37, lc:171] Sent message to both
+[VM1 | time: 1457728569.4, lc:174] Message received, Queue still has 0 messages
+[VM1 | time: 1457728569.66, lc:174] Sent message to 2
+[VM2 | time: 1457728569.71, lc:173] Message received, Queue still has 0 messages
+[VM3 | time: 1457728569.71, lc:175] Message received, Queue still has 0 messages
+[VM1 | time: 1457728569.91, lc:175] Sent message to both
+[VM3 | time: 1457728570.04, lc:176] Message received, Queue still has 0 messages
+[VM2 | time: 1457728570.04, lc:176] Message received, Queue still has 0 messages
+[VM1 | time: 1457728570.16, lc:176] Internal event
+[VM2 | time: 1457728570.37, lc:176] Internal event
+[VM3 | time: 1457728570.37, lc:176] Sent message to 2
+[VM1 | time: 1457728570.41, lc:177] Sent message to both
+[VM1 | time: 1457728570.66, lc:178] Sent message to 1
+[VM2 | time: 1457728570.71, lc:178] Message received, Queue still has 2 messages
+[VM3 | time: 1457728570.71, lc:178] Message received, Queue still has 0 messages
+[VM1 | time: 1457728570.91, lc:179] Internal event
+[VM2 | time: 1457728571.04, lc:179] Message received, Queue still has 1 messages
+[VM3 | time: 1457728571.04, lc:178] Internal event
+[VM1 | time: 1457728571.16, lc:180] Sent message to 1
+[VM2 | time: 1457728571.37, lc:180] Message received, Queue still has 1 messages
+[VM3 | time: 1457728571.37, lc:179] Internal event
+[VM1 | time: 1457728571.41, lc:181] Internal event
+[VM1 | time: 1457728571.66, lc:182] Internal event
+[VM2 | time: 1457728571.71, lc:181] Message received, Queue still has 0 messages
+[VM3 | time: 1457728571.71, lc:180] Internal event
+[VM1 | time: 1457728571.91, lc:183] Sent message to 1
+[VM2 | time: 1457728572.04, lc:184] Message received, Queue still has 0 messages
+[VM3 | time: 1457728572.04, lc:181] Sent message to 1
+[VM1 | time: 1457728572.16, lc:185] Message received, Queue still has 0 messages
+[VM2 | time: 1457728572.37, lc:184] Internal event
+[VM3 | time: 1457728572.38, lc:182] Sent message to 1
+[VM1 | time: 1457728572.41, lc:186] Message received, Queue still has 0 messages
+[VM1 | time: 1457728572.66, lc:186] Sent message to both
+[VM2 | time: 1457728572.71, lc:187] Message received, Queue still has 0 messages
+[VM3 | time: 1457728572.71, lc:187] Message received, Queue still has 0 messages
+[VM1 | time: 1457728572.91, lc:187] Internal event
+[VM3 | time: 1457728573.04, lc:187] Internal event
+[VM2 | time: 1457728573.04, lc:187] Internal event
+[VM1 | time: 1457728573.16, lc:188] Internal event
+[VM3 | time: 1457728573.37, lc:188] Internal event
+[VM2 | time: 1457728573.37, lc:188] Internal event
+[VM1 | time: 1457728573.41, lc:189] Sent message to both
+[VM1 | time: 1457728573.66, lc:190] Sent message to 2
+[VM3 | time: 1457728573.71, lc:190] Message received, Queue still has 1 messages
+[VM2 | time: 1457728573.71, lc:190] Message received, Queue still has 0 messages
+[VM1 | time: 1457728573.91, lc:191] Sent message to both
+[VM2 | time: 1457728574.04, lc:192] Message received, Queue still has 0 messages
+[VM3 | time: 1457728574.04, lc:191] Message received, Queue still has 1 messages
+[VM1 | time: 1457728574.16, lc:192] Sent message to 1
+[VM3 | time: 1457728574.38, lc:192] Message received, Queue still has 0 messages
+[VM2 | time: 1457728574.38, lc:193] Message received, Queue still has 0 messages
+[VM1 | time: 1457728574.41, lc:193] Sent message to both
+[VM1 | time: 1457728574.66, lc:194] Internal event
+[VM3 | time: 1457728574.71, lc:194] Message received, Queue still has 0 messages
+[VM2 | time: 1457728574.71, lc:194] Message received, Queue still has 0 messages
+[VM1 | time: 1457728574.92, lc:195] Internal event
+[VM3 | time: 1457728575.04, lc:194] Sent message to 1
+[VM2 | time: 1457728575.04, lc:194] Sent message to 1
+[VM1 | time: 1457728575.17, lc:197] Message received, Queue still has 1 messages
+[VM3 | time: 1457728575.37, lc:195] Internal event
+[VM2 | time: 1457728575.38, lc:195] Internal event
+[VM1 | time: 1457728575.42, lc:198] Message received, Queue still has 0 messages
+[VM1 | time: 1457728575.67, lc:198] Sent message to 1
+[VM3 | time: 1457728575.71, lc:196] Internal event
+[VM2 | time: 1457728575.71, lc:199] Message received, Queue still has 0 messages
+[VM1 | time: 1457728575.92, lc:199] Internal event
+[VM3 | time: 1457728576.04, lc:197] Internal event
+[VM2 | time: 1457728576.04, lc:199] Sent message to both
+[VM1 | time: 1457728576.17, lc:201] Message received, Queue still has 0 messages
+[VM3 | time: 1457728576.38, lc:200] Message received, Queue still has 0 messages
+[VM2 | time: 1457728576.38, lc:200] Sent message to 2
+[VM1 | time: 1457728576.42, lc:201] Internal event
+[VM1 | time: 1457728576.67, lc:202] Internal event
+[VM3 | time: 1457728576.71, lc:201] Message received, Queue still has 0 messages
+[VM2 | time: 1457728576.71, lc:201] Internal event
+[VM1 | time: 1457728576.92, lc:203] Internal event
+[VM3 | time: 1457728577.04, lc:201] Internal event
+[VM2 | time: 1457728577.04, lc:202] Internal event
+[VM1 | time: 1457728577.17, lc:204] Internal event
+[VM3 | time: 1457728577.38, lc:202] Internal event
+[VM2 | time: 1457728577.38, lc:203] Internal event
+[VM1 | time: 1457728577.42, lc:205] Internal event
+[VM1 | time: 1457728577.67, lc:206] Sent message to 1
+[VM2 | time: 1457728577.71, lc:207] Message received, Queue still has 0 messages
+[VM3 | time: 1457728577.71, lc:203] Internal event
+[VM1 | time: 1457728577.92, lc:207] Internal event
+[VM2 | time: 1457728578.04, lc:207] Internal event
+[VM3 | time: 1457728578.05, lc:204] Internal event
+[VM1 | time: 1457728578.17, lc:208] Internal event
+[VM2 | time: 1457728578.38, lc:208] Internal event
+[VM3 | time: 1457728578.38, lc:205] Sent message to both
+[VM1 | time: 1457728578.42, lc:210] Message received, Queue still has 0 messages
+[VM1 | time: 1457728578.67, lc:210] Internal event
+[VM2 | time: 1457728578.71, lc:210] Message received, Queue still has 0 messages
+[VM3 | time: 1457728578.71, lc:206] Internal event
+[VM1 | time: 1457728578.92, lc:211] Sent message to 1
+[VM2 | time: 1457728579.05, lc:212] Message received, Queue still has 0 messages
+[VM3 | time: 1457728579.05, lc:207] Internal event
+[VM1 | time: 1457728579.17, lc:212] Internal event
+[VM2 | time: 1457728579.38, lc:212] Sent message to both
+[VM3 | time: 1457728579.38, lc:213] Message received, Queue still has 0 messages
+[VM1 | time: 1457728579.42, lc:214] Message received, Queue still has 0 messages
+[VM1 | time: 1457728579.67, lc:214] Internal event
+[VM3 | time: 1457728579.71, lc:213] Internal event
+[VM2 | time: 1457728579.71, lc:213] Internal event
+[VM1 | time: 1457728579.92, lc:215] Sent message to 1
+[VM2 | time: 1457728580.05, lc:216] Message received, Queue still has 0 messages
+[VM3 | time: 1457728580.05, lc:214] Sent message to 1
+[VM1 | time: 1457728580.17, lc:217] Message received, Queue still has 0 messages
+[VM2 | time: 1457728580.38, lc:216] Internal event
+[VM3 | time: 1457728580.38, lc:215] Sent message to both
+[VM1 | time: 1457728580.43, lc:218] Message received, Queue still has 0 messages
+[VM1 | time: 1457728580.68, lc:218] Internal event
+[VM3 | time: 1457728580.71, lc:216] Internal event
+[VM2 | time: 1457728580.71, lc:218] Message received, Queue still has 0 messages
+[VM1 | time: 1457728580.93, lc:219] Sent message to 2
+[VM2 | time: 1457728581.05, lc:218] Internal event
+[VM3 | time: 1457728581.05, lc:220] Message received, Queue still has 0 messages
+[VM1 | time: 1457728581.18, lc:220] Internal event
+[VM2 | time: 1457728581.38, lc:219] Internal event
+[VM3 | time: 1457728581.38, lc:220] Internal event
+[VM1 | time: 1457728581.43, lc:221] Internal event
+[VM1 | time: 1457728581.68, lc:222] Internal event
+[VM2 | time: 1457728581.71, lc:220] Sent message to both
+[VM3 | time: 1457728581.71, lc:222] Message received, Queue still has 0 messages
+[VM1 | time: 1457728581.93, lc:224] Message received, Queue still has 0 messages
+[VM2 | time: 1457728582.05, lc:221] Internal event
+[VM3 | time: 1457728582.05, lc:222] Internal event
+[VM1 | time: 1457728582.18, lc:224] Sent message to 1
+[VM3 | time: 1457728582.38, lc:223] Internal event
+[VM2 | time: 1457728582.38, lc:225] Message received, Queue still has 0 messages
+[VM1 | time: 1457728582.43, lc:225] Internal event
+[VM1 | time: 1457728582.68, lc:226] Internal event
+[VM3 | time: 1457728582.71, lc:224] Internal event
+[VM2 | time: 1457728582.71, lc:225] Internal event
+[VM1 | time: 1457728582.93, lc:227] Internal event
+[VM3 | time: 1457728583.05, lc:225] Internal event
+[VM2 | time: 1457728583.05, lc:226] Internal event
+[VM1 | time: 1457728583.18, lc:228] Internal event
+[VM3 | time: 1457728583.38, lc:226] Internal event
+[VM2 | time: 1457728583.38, lc:227] Internal event
+[VM1 | time: 1457728583.43, lc:229] Sent message to 2
+[VM1 | time: 1457728583.68, lc:230] Internal event
+[VM2 | time: 1457728583.71, lc:228] Internal event
+[VM3 | time: 1457728583.71, lc:230] Message received, Queue still has 0 messages
+[VM1 | time: 1457728583.93, lc:231] Internal event
+[VM2 | time: 1457728584.05, lc:229] Internal event
+[VM3 | time: 1457728584.05, lc:230] Sent message to 1
+[VM1 | time: 1457728584.18, lc:233] Message received, Queue still has 0 messages
+[VM2 | time: 1457728584.38, lc:230] Internal event
+[VM3 | time: 1457728584.38, lc:231] Internal event
+[VM1 | time: 1457728584.43, lc:233] Internal event
+[VM1 | time: 1457728584.68, lc:234] Internal event
+[VM2 | time: 1457728584.71, lc:231] Sent message to both
+[VM3 | time: 1457728584.71, lc:233] Message received, Queue still has 0 messages
+[VM1 | time: 1457728584.93, lc:236] Message received, Queue still has 0 messages
+[VM2 | time: 1457728585.05, lc:232] Internal event
+[VM3 | time: 1457728585.05, lc:233] Internal event
+[VM1 | time: 1457728585.18, lc:236] Internal event
+[VM2 | time: 1457728585.38, lc:233] Internal event
+[VM3 | time: 1457728585.38, lc:234] Internal event
+[VM1 | time: 1457728585.43, lc:237] Internal event
+[VM1 | time: 1457728585.68, lc:238] Internal event
+[VM2 | time: 1457728585.72, lc:234] Internal event
+[VM3 | time: 1457728585.72, lc:235] Internal event
+[VM1 | time: 1457728585.93, lc:239] Sent message to 1
+[VM3 | time: 1457728586.05, lc:236] Internal event
+[VM2 | time: 1457728586.05, lc:240] Message received, Queue still has 0 messages
+[VM1 | time: 1457728586.19, lc:240] Internal event
+[VM3 | time: 1457728586.38, lc:237] Internal event
+[VM2 | time: 1457728586.38, lc:240] Internal event
+[VM1 | time: 1457728586.44, lc:241] Internal event
+[VM1 | time: 1457728586.69, lc:242] Internal event
+[VM3 | time: 1457728586.72, lc:238] Internal event
+[VM2 | time: 1457728586.72, lc:241] Sent message to 2
+[VM1 | time: 1457728586.94, lc:243] Internal event
+[VM2 | time: 1457728587.05, lc:242] Internal event
+[VM3 | time: 1457728587.05, lc:242] Message received, Queue still has 0 messages
+[VM1 | time: 1457728587.19, lc:244] Internal event
+[VM2 | time: 1457728587.38, lc:243] Internal event
+[VM3 | time: 1457728587.38, lc:242] Internal event
+[VM1 | time: 1457728587.44, lc:245] Internal event
+[VM1 | time: 1457728587.69, lc:246] Internal event
+[VM2 | time: 1457728587.72, lc:244] Internal event
+[VM3 | time: 1457728587.72, lc:243] Internal event
+[VM1 | time: 1457728587.94, lc:247] Internal event
+[VM2 | time: 1457728588.05, lc:245] Internal event
+[VM3 | time: 1457728588.05, lc:244] Internal event
+[VM1 | time: 1457728588.19, lc:248] Sent message to 1
+[VM3 | time: 1457728588.38, lc:245] Internal event
+[VM2 | time: 1457728588.38, lc:249] Message received, Queue still has 0 messages
+[VM1 | time: 1457728588.44, lc:249] Sent message to both
+[VM1 | time: 1457728588.69, lc:250] Internal event
+[VM3 | time: 1457728588.72, lc:250] Message received, Queue still has 0 messages
+[VM2 | time: 1457728588.72, lc:250] Message received, Queue still has 0 messages
+[VM1 | time: 1457728588.94, lc:251] Internal event
+[VM3 | time: 1457728589.05, lc:250] Internal event
+[VM2 | time: 1457728589.05, lc:250] Internal event
+[VM1 | time: 1457728589.19, lc:252] Internal event
+[VM3 | time: 1457728589.38, lc:251] Internal event
+[VM2 | time: 1457728589.38, lc:251] Sent message to 2
+[VM1 | time: 1457728589.44, lc:253] Internal event
+[VM1 | time: 1457728589.69, lc:254] Internal event
+[VM2 | time: 1457728589.72, lc:252] Internal event
+[VM3 | time: 1457728589.72, lc:253] Message received, Queue still has 0 messages
+[VM1 | time: 1457728589.94, lc:255] Sent message to 1
+[VM2 | time: 1457728590.05, lc:256] Message received, Queue still has 0 messages
+[VM3 | time: 1457728590.05, lc:253] Internal event
+[VM1 | time: 1457728590.19, lc:256] Sent message to both
+[VM3 | time: 1457728590.39, lc:257] Message received, Queue still has 0 messages
+[VM2 | time: 1457728590.39, lc:257] Message received, Queue still has 0 messages
+[VM1 | time: 1457728590.44, lc:257] Sent message to 2
+[VM1 | time: 1457728590.69, lc:258] Sent message to both
+[VM2 | time: 1457728590.72, lc:259] Message received, Queue still has 0 messages
+[VM3 | time: 1457728590.72, lc:258] Message received, Queue still has 1 messages
+[VM1 | time: 1457728590.94, lc:259] Sent message to both
+[VM3 | time: 1457728591.05, lc:259] Message received, Queue still has 1 messages
+[VM2 | time: 1457728591.05, lc:260] Message received, Queue still has 0 messages
+[VM1 | time: 1457728591.19, lc:260] Internal event
+[VM3 | time: 1457728591.39, lc:260] Message received, Queue still has 0 messages
+[VM2 | time: 1457728591.39, lc:260] Internal event
+[VM1 | time: 1457728591.44, lc:261] Internal event
+[VM1 | time: 1457728591.69, lc:262] Internal event
+[VM2 | time: 1457728591.72, lc:261] Internal event
+[VM3 | time: 1457728591.72, lc:260] Internal event
+[VM1 | time: 1457728591.94, lc:263] Internal event
+[VM2 | time: 1457728592.05, lc:262] Internal event
+[VM3 | time: 1457728592.05, lc:261] Internal event
+[VM1 | time: 1457728592.2, lc:264] Sent message to 1
+[VM3 | time: 1457728592.39, lc:262] Internal event
+[VM2 | time: 1457728592.39, lc:265] Message received, Queue still has 0 messages
+[VM1 | time: 1457728592.45, lc:265] Sent message to 1
+[VM1 | time: 1457728592.7, lc:266] Internal event
+[VM3 | time: 1457728592.72, lc:263] Internal event
+[VM2 | time: 1457728592.72, lc:266] Message received, Queue still has 0 messages
+[VM1 | time: 1457728592.95, lc:267] Internal event
+[VM3 | time: 1457728593.05, lc:264] Sent message to 2
+[VM2 | time: 1457728593.05, lc:267] Message received, Queue still has 0 messages
+[VM1 | time: 1457728593.2, lc:268] Sent message to 2
+[VM3 | time: 1457728593.39, lc:269] Message received, Queue still has 0 messages
+[VM2 | time: 1457728593.39, lc:267] Internal event
+[VM1 | time: 1457728593.45, lc:269] Internal event
+[VM1 | time: 1457728593.7, lc:270] Sent message to 2
+[VM2 | time: 1457728593.72, lc:268] Sent message to 1
+[VM3 | time: 1457728593.72, lc:271] Message received, Queue still has 0 messages
+[VM1 | time: 1457728593.95, lc:272] Message received, Queue still has 0 messages
+[VM2 | time: 1457728594.05, lc:269] Internal event
+[VM3 | time: 1457728594.05, lc:271] Internal event
+[VM1 | time: 1457728594.2, lc:272] Internal event
+[VM2 | time: 1457728594.39, lc:270] Internal event
+[VM3 | time: 1457728594.39, lc:272] Internal event
+[VM1 | time: 1457728594.45, lc:273] Internal event
+[VM1 | time: 1457728594.7, lc:274] Internal event
+[VM2 | time: 1457728594.72, lc:271] Internal event
+[VM3 | time: 1457728594.72, lc:273] Internal event
+[VM1 | time: 1457728594.95, lc:275] Sent message to both
+[VM2 | time: 1457728595.05, lc:276] Message received, Queue still has 0 messages
+[VM3 | time: 1457728595.05, lc:276] Message received, Queue still has 0 messages
+[VM1 | time: 1457728595.2, lc:276] Internal event
+[VM2 | time: 1457728595.39, lc:276] Internal event
+[VM3 | time: 1457728595.39, lc:276] Internal event
+[VM1 | time: 1457728595.45, lc:277] Sent message to 1
+[VM1 | time: 1457728595.7, lc:278] Internal event
+[VM3 | time: 1457728595.72, lc:277] Internal event
+[VM2 | time: 1457728595.72, lc:278] Message received, Queue still has 0 messages
+[VM1 | time: 1457728595.95, lc:279] Internal event
+[VM3 | time: 1457728596.05, lc:278] Internal event
+[VM2 | time: 1457728596.06, lc:278] Sent message to 2
+[VM1 | time: 1457728596.2, lc:280] Internal event
+[VM2 | time: 1457728596.39, lc:279] Internal event
+[VM3 | time: 1457728596.39, lc:280] Message received, Queue still has 0 messages
+[VM1 | time: 1457728596.45, lc:281] Internal event
+[VM1 | time: 1457728596.71, lc:282] Internal event
+[VM2 | time: 1457728596.72, lc:280] Internal event
+[VM3 | time: 1457728596.72, lc:280] Internal event
+[VM1 | time: 1457728596.96, lc:283] Internal event
+[VM2 | time: 1457728597.06, lc:281] Internal event
+[VM3 | time: 1457728597.06, lc:281] Internal event
+[VM1 | time: 1457728597.21, lc:284] Internal event
+[VM2 | time: 1457728597.39, lc:282] Internal event
+[VM3 | time: 1457728597.39, lc:282] Internal event
+[VM1 | time: 1457728597.46, lc:285] Internal event
+[VM1 | time: 1457728597.71, lc:286] Internal event
+[VM2 | time: 1457728597.72, lc:283] Internal event
+[VM3 | time: 1457728597.72, lc:283] Internal event
+[VM1 | time: 1457728597.96, lc:287] Internal event
+[VM3 | time: 1457728598.06, lc:284] Internal event
+[VM2 | time: 1457728598.06, lc:284] Sent message to 1
+[VM1 | time: 1457728598.21, lc:289] Message received, Queue still has 0 messages
+[VM3 | time: 1457728598.39, lc:285] Internal event
+[VM2 | time: 1457728598.39, lc:285] Internal event
+[VM1 | time: 1457728598.46, lc:289] Internal event
+[VM1 | time: 1457728598.71, lc:290] Internal event
+[VM2 | time: 1457728598.72, lc:286] Internal event
+[VM3 | time: 1457728598.72, lc:286] Internal event
+[VM1 | time: 1457728598.96, lc:291] Internal event
+[VM2 | time: 1457728599.06, lc:287] Sent message to 1
+[VM3 | time: 1457728599.06, lc:287] Internal event
+[VM1 | time: 1457728599.21, lc:293] Message received, Queue still has 0 messages
+[VM2 | time: 1457728599.39, lc:288] Sent message to both
+[VM3 | time: 1457728599.39, lc:289] Message received, Queue still has 0 messages
+[VM1 | time: 1457728599.46, lc:294] Message received, Queue still has 0 messages
+[VM1 | time: 1457728599.71, lc:294] Sent message to 1
+[VM2 | time: 1457728599.72, lc:295] Message received, Queue still has 0 messages
+[VM3 | time: 1457728599.72, lc:289] Internal event
+[VM1 | time: 1457728599.96, lc:295] Internal event
+[VM3 | time: 1457728600.06, lc:290] Internal event
+[VM2 | time: 1457728600.06, lc:295] Internal event
+[VM1 | time: 1457728600.22, lc:296] Internal event
+[VM3 | time: 1457728600.39, lc:291] Internal event
+[VM2 | time: 1457728600.39, lc:296] Internal event
+[VM1 | time: 1457728600.47, lc:297] Internal event
+[VM1 | time: 1457728600.72, lc:298] Internal event
+[VM3 | time: 1457728600.73, lc:292] Internal event
+[VM2 | time: 1457728600.73, lc:297] Internal event
+[VM1 | time: 1457728600.97, lc:299] Sent message to 1
+[VM3 | time: 1457728601.06, lc:293] Sent message to 2
+[VM2 | time: 1457728601.06, lc:300] Message received, Queue still has 0 messages
+[VM1 | time: 1457728601.22, lc:300] Internal event
+[VM3 | time: 1457728601.39, lc:294] Internal event
+[VM2 | time: 1457728601.39, lc:301] Message received, Queue still has 0 messages
+[VM1 | time: 1457728601.47, lc:301] Internal event
+[VM1 | time: 1457728601.72, lc:302] Sent message to 1
+[VM3 | time: 1457728601.73, lc:295] Sent message to 2
+[VM2 | time: 1457728601.73, lc:303] Message received, Queue still has 1 messages
+[VM1 | time: 1457728601.97, lc:303] Sent message to 1
+[VM3 | time: 1457728602.06, lc:296] Internal event
+[VM2 | time: 1457728602.06, lc:304] Message received, Queue still has 1 messages
+[VM1 | time: 1457728602.22, lc:304] Internal event
+[VM3 | time: 1457728602.39, lc:297] Internal event
+[VM2 | time: 1457728602.39, lc:305] Message received, Queue still has 0 messages
+[VM1 | time: 1457728602.47, lc:305] Internal event
+[VM1 | time: 1457728602.72, lc:306] Internal event
+[VM3 | time: 1457728602.73, lc:298] Sent message to both
+[VM2 | time: 1457728602.73, lc:306] Message received, Queue still has 0 messages
+[VM1 | time: 1457728602.97, lc:308] Message received, Queue still has 0 messages
+[VM3 | time: 1457728603.06, lc:299] Sent message to 1
+[VM2 | time: 1457728603.06, lc:306] Sent message to 2
+[VM1 | time: 1457728603.22, lc:309] Message received, Queue still has 0 messages
+[VM3 | time: 1457728603.39, lc:307] Message received, Queue still has 0 messages
+[VM2 | time: 1457728603.39, lc:307] Internal event
+[VM1 | time: 1457728603.47, lc:309] Internal event
+[VM1 | time: 1457728603.72, lc:310] Internal event
+[VM3 | time: 1457728603.73, lc:307] Internal event
+[VM2 | time: 1457728603.73, lc:308] Internal event
+[VM1 | time: 1457728603.97, lc:311] Internal event
+[VM3 | time: 1457728604.06, lc:308] Internal event
+[VM2 | time: 1457728604.06, lc:309] Internal event
+[VM1 | time: 1457728604.22, lc:312] Internal event
+[VM3 | time: 1457728604.39, lc:309] Internal event
+[VM2 | time: 1457728604.39, lc:310] Sent message to 2
+[VM1 | time: 1457728604.47, lc:313] Sent message to 2
+[VM1 | time: 1457728604.72, lc:314] Sent message to 1
+[VM3 | time: 1457728604.73, lc:311] Message received, Queue still has 1 messages
+[VM2 | time: 1457728604.73, lc:315] Message received, Queue still has 0 messages
+[VM1 | time: 1457728604.97, lc:315] Internal event
+[VM3 | time: 1457728605.06, lc:314] Message received, Queue still has 0 messages
+[VM2 | time: 1457728605.06, lc:315] Internal event
+[VM1 | time: 1457728605.22, lc:316] Internal event
+[VM3 | time: 1457728605.39, lc:314] Internal event
+[VM2 | time: 1457728605.4, lc:316] Internal event
+[VM1 | time: 1457728605.47, lc:317] Sent message to 2
+[VM1 | time: 1457728605.72, lc:318] Internal event
+[VM3 | time: 1457728605.73, lc:318] Message received, Queue still has 0 messages
+[VM2 | time: 1457728605.73, lc:317] Sent message to 2
+[VM1 | time: 1457728605.98, lc:319] Internal event
+[VM3 | time: 1457728606.06, lc:319] Message received, Queue still has 0 messages
+[VM2 | time: 1457728606.06, lc:318] Sent message to 1
+[VM1 | time: 1457728606.22, lc:321] Message received, Queue still has 0 messages
+[VM3 | time: 1457728606.39, lc:319] Internal event
+[VM2 | time: 1457728606.4, lc:319] Internal event
+[VM1 | time: 1457728606.48, lc:321] Internal event
+[VM1 | time: 1457728606.73, lc:322] Internal event
+[VM3 | time: 1457728606.73, lc:320] Internal event
+[VM2 | time: 1457728606.73, lc:320] Sent message to both
+[VM1 | time: 1457728606.98, lc:324] Message received, Queue still has 0 messages
+[VM3 | time: 1457728607.06, lc:322] Message received, Queue still has 0 messages
+[VM2 | time: 1457728607.06, lc:321] Sent message to both
+[VM1 | time: 1457728607.23, lc:325] Message received, Queue still has 0 messages
+[VM3 | time: 1457728607.4, lc:323] Message received, Queue still has 0 messages
+[VM2 | time: 1457728607.4, lc:322] Sent message to both
+[VM1 | time: 1457728607.48, lc:326] Message received, Queue still has 0 messages
+[VM1 | time: 1457728607.73, lc:326] Internal event
+[VM3 | time: 1457728607.73, lc:324] Message received, Queue still has 0 messages
+[VM2 | time: 1457728607.73, lc:323] Sent message to 1
+[VM1 | time: 1457728607.98, lc:328] Message received, Queue still has 0 messages
+[VM3 | time: 1457728608.06, lc:324] Internal event
+[VM2 | time: 1457728608.06, lc:324] Internal event
+[VM1 | time: 1457728608.23, lc:328] Sent message to both
+[VM3 | time: 1457728608.4, lc:329] Message received, Queue still has 0 messages
+[VM2 | time: 1457728608.4, lc:329] Message received, Queue still has 0 messages
+[VM1 | time: 1457728608.48, lc:329] Internal event
+[VM1 | time: 1457728608.73, lc:330] Internal event
+[VM3 | time: 1457728608.73, lc:329] Internal event
+[VM2 | time: 1457728608.73, lc:329] Internal event
+[VM1 | time: 1457728608.98, lc:331] Internal event
+[VM3 | time: 1457728609.06, lc:330] Internal event
+[VM2 | time: 1457728609.06, lc:330] Sent message to both
+[VM1 | time: 1457728609.23, lc:333] Message received, Queue still has 0 messages
+[VM3 | time: 1457728609.4, lc:332] Message received, Queue still has 0 messages
+[VM2 | time: 1457728609.4, lc:331] Internal event
+[VM1 | time: 1457728609.48, lc:333] Internal event
+[VM3 | time: 1457728609.73, lc:332] Sent message to 1
+[VM1 | time: 1457728609.73, lc:335] Message received, Queue still has 0 messages
+[VM2 | time: 1457728609.73, lc:332] Internal event
+[VM1 | time: 1457728609.98, lc:335] Sent message to 1
+[VM3 | time: 1457728610.06, lc:333] Internal event
+[VM2 | time: 1457728610.06, lc:336] Message received, Queue still has 0 messages
+[VM1 | time: 1457728610.23, lc:336] Internal event
+[VM3 | time: 1457728610.4, lc:334] Sent message to 2
+[VM2 | time: 1457728610.4, lc:337] Message received, Queue still has 0 messages
+[VM1 | time: 1457728610.48, lc:337] Internal event
+[VM3 | time: 1457728610.73, lc:335] Internal event
+[VM2 | time: 1457728610.73, lc:337] Internal event
+[VM1 | time: 1457728610.73, lc:338] Sent message to 1
+[VM1 | time: 1457728610.98, lc:339] Internal event
+[VM3 | time: 1457728611.06, lc:336] Internal event
+[VM2 | time: 1457728611.07, lc:339] Message received, Queue still has 0 messages
+[VM1 | time: 1457728611.23, lc:340] Internal event
+[VM3 | time: 1457728611.4, lc:337] Sent message to both
+[VM2 | time: 1457728611.4, lc:340] Message received, Queue still has 0 messages
+[VM1 | time: 1457728611.48, lc:342] Message received, Queue still has 0 messages
+[VM3 | time: 1457728611.73, lc:338] Internal event
+[VM2 | time: 1457728611.73, lc:340] Internal event
+[VM1 | time: 1457728611.73, lc:342] Internal event
+[VM1 | time: 1457728611.98, lc:343] Sent message to 1
+[VM3 | time: 1457728612.06, lc:339] Internal event
+[VM2 | time: 1457728612.07, lc:344] Message received, Queue still has 0 messages
+[VM1 | time: 1457728612.23, lc:344] Internal event
+[VM3 | time: 1457728612.4, lc:340] Internal event
+[VM2 | time: 1457728612.4, lc:344] Internal event
+[VM1 | time: 1457728612.48, lc:345] Internal event
+[VM3 | time: 1457728612.73, lc:341] Sent message to 1
+[VM2 | time: 1457728612.73, lc:345] Internal event
+[VM1 | time: 1457728612.73, lc:347] Message received, Queue still has 0 messages
+[VM1 | time: 1457728612.99, lc:347] Internal event
+[VM2 | time: 1457728613.07, lc:347] Message received, Queue still has 0 messages
+[VM3 | time: 1457728613.07, lc:342] Sent message to 2
+[VM1 | time: 1457728613.24, lc:348] Internal event
+[VM2 | time: 1457728613.4, lc:347] Internal event
+[VM3 | time: 1457728613.4, lc:343] Internal event
+[VM1 | time: 1457728613.49, lc:349] Sent message to both
+[VM2 | time: 1457728613.73, lc:350] Message received, Queue still has 0 messages
+[VM3 | time: 1457728613.73, lc:350] Message received, Queue still has 0 messages
+[VM1 | time: 1457728613.74, lc:350] Internal event
+[VM1 | time: 1457728613.99, lc:351] Internal event
+[VM2 | time: 1457728614.07, lc:350] Internal event
+[VM3 | time: 1457728614.07, lc:350] Sent message to 1
+[VM1 | time: 1457728614.24, lc:353] Message received, Queue still has 0 messages
+[VM2 | time: 1457728614.4, lc:351] Internal event
+[VM3 | time: 1457728614.41, lc:351] Internal event
+[VM1 | time: 1457728614.49, lc:353] Internal event
+[VM2 | time: 1457728614.73, lc:352] Internal event
+[VM3 | time: 1457728614.74, lc:352] Internal event
+[VM1 | time: 1457728614.74, lc:354] Sent message to both
+[VM1 | time: 1457728614.99, lc:355] Sent message to both
+[VM2 | time: 1457728615.07, lc:355] Message received, Queue still has 1 messages
+[VM3 | time: 1457728615.07, lc:355] Message received, Queue still has 1 messages
+[VM1 | time: 1457728615.24, lc:356] Internal event
+[VM2 | time: 1457728615.4, lc:356] Message received, Queue still has 0 messages
+[VM3 | time: 1457728615.41, lc:356] Message received, Queue still has 0 messages
+[VM1 | time: 1457728615.49, lc:357] Internal event
+[VM2 | time: 1457728615.73, lc:356] Internal event
+[VM3 | time: 1457728615.74, lc:356] Sent message to 1
+[VM1 | time: 1457728615.74, lc:359] Message received, Queue still has 0 messages
+[VM1 | time: 1457728615.99, lc:359] Internal event
+[VM2 | time: 1457728616.07, lc:357] Internal event
+[VM3 | time: 1457728616.07, lc:357] Internal event
+[VM1 | time: 1457728616.24, lc:360] Sent message to 1
+[VM2 | time: 1457728616.4, lc:361] Message received, Queue still has 0 messages
+[VM3 | time: 1457728616.41, lc:358] Sent message to both

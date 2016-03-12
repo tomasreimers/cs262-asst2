@@ -42,3 +42,9 @@
  - Okay, looks like it's working... Will need more tests.
     - Cool stuff! Observing that on slower systems, the queue accumulates and
       then the LC falls behind.
+
+[March 9th]
+ - Ughhh, Waldo is making it difficult to do in python. I *think* our python
+   solution is  valid, but no way to tell. Reimplementing in C.
+    - Fork 3 procs, each proc forks 2 threads (1 reader, 1 writer). Using pipes
+      to send data back and forth

@@ -155,7 +155,7 @@ Github: https://github.com/tomasreimers/cs262-asst2
    solution is  valid, but no way to tell. Reimplementing in C with "proper" threads.
     - Fork 3 procs, each proc forks 2 threads (1 reader, 1 writer). Using pipes
       to send data back and forth
- - Reimplemented the program in C (with "proper" threading and processes) with the same output as the Python program. We can now apply the same analysis tools.
+ - Reimplemented the program in C (with "proper" threading and processes) with the same format of output as the Python program. We can now apply the same analysis tools.
  - Printing all data to programs so we can do analysis.
  - Whoops, we need to flush the buffer for printing logs. Otherwise the log output gets buffered together for each proc.
  - Looks like everything is working. Generating 6 tests.

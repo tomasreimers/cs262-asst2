@@ -51,9 +51,11 @@ Github: https://github.com/tomasreimers/cs262-asst2
     running on willy1 willy2
     to verify the # of actions: cat willy1 | grep "VM1 " | wc -l
 
+- Waldo said that need to make sure python "simulates threads correctly", modifying python so "threads" are interleaved (and not blocked by the GIL)
 - RE-WRITE THE CODE as per Waldo's claim that we have to "simulate" two processes.
 
 [March 11, 2016]
+- Choosing to write output to stdout (rather than file), because that way you can see the output for experimenting and redirect output to something if you prefer
 - Running experiments 6 times, piping all of the output to ./labnotebooks/experiments/willy{1-6}.
 
     Observations:
@@ -69,35 +71,35 @@ Github: https://github.com/tomasreimers/cs262-asst2
         Final LC Values:[360, 361, 358]
         Biggest gap:[2, 8, 8]
         Longest queue:[1, 2, 1]
-    
+
         willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy2
         Clock Speeds: [VM1: 5 | VM2: 1 | VM3: 1]
         Number of ticks:[450, 91, 91]
         Final LC Values:[450, 427, 426]
         Biggest gap:[1, 18, 28]
         Longest queue:[0, 6, 5]
-    
+
         willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy3
         Clock Speeds: [VM1: 4 | VM2: 3 | VM3: 2]
         Number of ticks:[360, 271, 180]
         Final LC Values:[360, 359, 355]
         Biggest gap:[2, 8, 12]
         Longest queue:[1, 1, 2]
-    
+
         willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy4
         Clock Speeds: [VM1: 3 | VM2: 6 | VM3: 6]
         Number of ticks:[271, 539, 539]
         Final LC Values:[540, 539, 540]
         Biggest gap:[9, 2, 2]
         Longest queue:[2, 0, 1]
-    
+
         willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy5
         Clock Speeds: [VM1: 2 | VM2: 3 | VM3: 6]
         Number of ticks:[181, 271, 539]
         Final LC Values:[537, 540, 539]
         Biggest gap:[14, 13, 2]
         Longest queue:[3, 1, 0]
-    
+
         willyxiao:~/workspace/cs262-asst2/src (master) $ python parse.py ../labnotebooks/experiments/willy6
         Clock Speeds: [VM1: 5 | VM2: 6 | VM3: 1]
         Number of ticks:[450, 539, 91]
@@ -109,7 +111,7 @@ Github: https://github.com/tomasreimers/cs262-asst2
 
 - To test this hypothesis that 2 fast clocks overwhelm a slow clock and that one fast clock doesn't have a detrimental effect on the 'system' I will run the following:
     Clock speeds: [VM1: 6 | VM2: 1 | VM3: 1] and Clock speeds:  [VM1: 6 | VM2: 6 | VM3: 1]
-    
+
     Here are the summary stats:
         TWO SLOW TEST:
             Clock Speeds: [VM1: 6 | VM2: 1 | VM3: 1]
@@ -118,23 +120,23 @@ Github: https://github.com/tomasreimers/cs262-asst2
             Biggest gap:[2, 19, 24]
             Longest queue:[0, 27, 17]
 
-        ONE SLOW TEST: 
+        ONE SLOW TEST:
             Clock Speeds: [VM1: 6 | VM2: 6 | VM3: 1]
             Number of ticks:[539, 539, 91]
             Final LC Values:[539, 539, 289]
             Biggest gap:[2, 2, 12]
             Longest queue:[1, 0, 94]
-    
-    The result looks like the two slow test has maybe even more gaps than the one slow test, but the queue doesn't get quite as long as the one slow test. In the one slow test the results are intuitive, which is the slower machine gets overwhelmed even in a minute and will certainly fall out of the system or need to be 'fixed'. 
+
+    The result looks like the two slow test has maybe even more gaps than the one slow test, but the queue doesn't get quite as long as the one slow test. In the one slow test the results are intuitive, which is the slower machine gets overwhelmed even in a minute and will certainly fall out of the system or need to be 'fixed'.
     I wonder if we run the TWO SLOW TEST again for longer (maybe 3 minutes instead of 80 seconds) if the VM2 and VM3 will just crash and burn or if it stabilizes at their current queue lengths.
-    
+
     Here's the result again for TWO SLOW TEST running for three minutes:
         Clock Speeds: [VM1: 6 | VM2: 1 | VM3: 1]
         Number of ticks:[1078, 180, 180]
         Final LC Values:[1078, 951, 927]
         Biggest gap:[1, 24, 25]
         Longest queue:[0, 25, 30]
-    
+
     The two longest queues happen to be about the same length as they were in the first iteration of this experiment which ran for a shorter amount of time. So it looks like our system won't get 'overwhelmed' by the fast clock and the limit of this to infinity is still a constant number of messages in the slow clock queues. And, as before, we can see that there's not too much clock drift.
 
 - Final experiment. So the issue where we have two really fast clocks and one slower clock is not that there isn't communication from the fast clocks to the slow clocks. Instead, the problem is that the slow clock takes too long to read messages off the queue, so it will likely never catch up. If we decrease the probability of sending a message (maybe to a fourth of its current probability, I bet there will be greater jumps but less drift).
@@ -145,5 +147,165 @@ Github: https://github.com/tomasreimers/cs262-asst2
       Final LC Values:[539, 539, 518]
       Biggest gap:[2, 2, 41]
       Longest queue:[0, 0, 3]
-   
+
    As expected, the jumps are much bigger, but because the slowest clock can still 'handle' the messages in its queue, its logical clock value isn't drifting nearly as much! This is great. On the other hand, this is assuming that a message is sent like 4 times less likely than before.
+
+[March 12th, 2016]
+ - Ughhh, Waldo is making it difficult to do in python. I *think* our python
+   solution is  valid, but no way to tell. Reimplementing in C with "proper" threads.
+    - Fork 3 procs, each proc forks 2 threads (1 reader, 1 writer). Using pipes
+      to send data back and forth
+ - Reimplemented the program in C (with "proper" threading and processes) with the same output as the Python program. We can now apply the same analysis tools.
+ - Printing all data to programs so we can do analysis.
+ - Whoops, we need to flush the buffer for printing logs. Otherwise the log output gets buffered together for each proc.
+ - Looks like everything is working. Generating 6 tests.
+ - Seriously?! So when we try to parallelize tests, all programs are seeded with same time and then cause identical results. So included pid in the random seed. Now rerunning.
+ - BOOM. WORKS. Results:
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas1
+        Clock Speeds: [VM1: 3 | VM2: 3 | VM3: 2]
+        Number of ticks:[179, 179, 120]
+        Final LC Values:[178, 179, 177]
+        Biggest gap:[2, 2, 10]
+        Longest queue:[1, 1, 3]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas2
+        Clock Speeds: [VM1: 4 | VM2: 4 | VM3: 1]
+        Number of ticks:[237, 237, 60]
+        Final LC Values:[236, 236, 135]
+        Biggest gap:[2, 2, 14]
+        Longest queue:[0, 0, 34]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas3
+        Clock Speeds: [VM1: 5 | VM2: 5 | VM3: 5]
+        Number of ticks:[296, 296, 296]
+        Final LC Values:[295, 295, 295]
+        Biggest gap:[2, 2, 2]
+        Longest queue:[1, 1, 2]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas4
+        Clock Speeds: [VM1: 6 | VM2: 5 | VM3: 3]
+        Number of ticks:[354, 296, 179]
+        Final LC Values:[353, 352, 352]
+        Biggest gap:[2, 5, 12]
+        Longest queue:[1, 1, 2]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas5
+        Clock Speeds: [VM1: 1 | VM2: 6 | VM3: 1]
+        Number of ticks:[60, 354, 60]
+        Final LC Values:[228, 353, 260]
+        Biggest gap:[16, 1, 27]
+        Longest queue:[23, 0, 17]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas6
+        Clock Speeds: [VM1: 2 | VM2: 1 | VM3: 6]
+        Number of ticks:[120, 60, 354]
+        Final LC Values:[350, 262, 353]
+        Biggest gap:[14, 23, 2]
+        Longest queue:[3, 21, 0]
+
+This seems to recreate the prior python findings. Faster clocks can overwhelm
+slower clocks and cause a build up in the queue and a lag in the LC.
+
+Now rerunning constraining the clock cycles to be closer together:
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-close1
+        Clock Speeds: [VM1: 2 | VM2: 2 | VM3: 2]
+        Number of ticks:[120, 120, 120]
+        Final LC Values:[119, 119, 119]
+        Biggest gap:[2, 2, 2]
+        Longest queue:[1, 2, 1]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-close2
+        Clock Speeds: [VM1: 3 | VM2: 3 | VM3: 1]
+        Number of ticks:[179, 179, 60]
+        Final LC Values:[178, 178, 171]
+        Biggest gap:[2, 2, 22]
+        Longest queue:[0, 0, 6]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-close3
+        Clock Speeds: [VM1: 1 | VM2: 1 | VM3: 2]
+        Number of ticks:[60, 60, 120]
+        Final LC Values:[115, 114, 119]
+        Biggest gap:[8, 8, 2]
+        Longest queue:[1, 2, 1]
+
+As clock cycles get closer together, the gaps between the LCs seems to get shorter,
+and the queues don't pile up as much. This may be because one proc can't overwhelm
+another as much. Let's try spreading out the LC times further:
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-far1
+        Clock Speeds: [VM1: 61 | VM2: 68 | VM3: 48]
+        Number of ticks:[3203, 3514, 2507]
+        Final LC Values:[3511, 3513, 3510]
+        Biggest gap:[7, 2, 8]
+        Longest queue:[2, 1, 4]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-far2
+        Clock Speeds: [VM1: 68 | VM2: 17 | VM3: 74]
+        Number of ticks:[3516, 963, 3853]
+        Final LC Values:[3850, 2950, 3852]
+        Biggest gap:[6, 20, 2]
+        Longest queue:[1, 311, 1]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-far3
+        Clock Speeds: [VM1: 75 | VM2: 66 | VM3: 47]
+        Number of ticks:[3893, 3435, 2453]
+        Final LC Values:[3892, 3890, 3887]
+        Biggest gap:[2, 7, 12]
+        Longest queue:[1, 1, 4]
+
+As expected, speeds that are further apart lead to more piling up of queues and
+greater lags in LC. See how tomas-far2 sets a HUGE queue pile up on VM2 (which only
+runs 17 actions per second instead of 68 or 74).
+
+Now let's try making more external events (lower probablility of internal events):
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-extern1
+        Clock Speeds: [VM1: 3 | VM2: 5 | VM3: 6]
+        Number of ticks:[179, 296, 354]
+        Final LC Values:[329, 353, 353]
+        Biggest gap:[7, 4, 2]
+        Longest queue:[16, 1, 0]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-extern2
+        Clock Speeds: [VM1: 4 | VM2: 6 | VM3: 4]
+        Number of ticks:[237, 354, 237]
+        Final LC Values:[349, 353, 349]
+        Biggest gap:[7, 2, 8]
+        Longest queue:[3, 1, 2]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-extern3
+        Clock Speeds: [VM1: 5 | VM2: 1 | VM3: 3]
+        Number of ticks:[296, 60, 179]
+        Final LC Values:[295, 150, 295]
+        Biggest gap:[2, 15, 7]
+        Longest queue:[0, 70, 3]
+
+And with more internal events:
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-intern1
+        Clock Speeds: [VM1: 2 | VM2: 1 | VM3: 4]
+        Number of ticks:[120, 60, 238]
+        Final LC Values:[200, 219, 237]
+        Biggest gap:[33, 56, 2]
+        Longest queue:[1, 0, 0]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-intern2
+        Clock Speeds: [VM1: 4 | VM2: 3 | VM3: 6]
+        Number of ticks:[238, 179, 354]
+        Final LC Values:[349, 343, 353]
+        Biggest gap:[31, 77, 2]
+        Longest queue:[0, 0, 0]
+
+        Tomass-MacBook-Pro:src tomasreimers$ python parse.py ../labnotebooks/experiments/tomas-intern3
+        Clock Speeds: [VM1: 5 | VM2: 4 | VM3: 4]
+        Number of ticks:[296, 238, 238]
+        Final LC Values:[295, 290, 285]
+        Biggest gap:[2, 16, 15]
+        Longest queue:[1, 0, 0]
+
+It seems that having more external events magnifies the difference between different clock cycles,
+and less external events (more internal events) hides the difference. When running with more
+internal events, even large differences in clock speeds doesn't lead to huge queue build ups.
+This is likely because machines have time to clear the queue before another message will be sent.

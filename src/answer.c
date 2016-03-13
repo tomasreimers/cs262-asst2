@@ -9,6 +9,7 @@
 #include <sys/time.h>
 
 #define MAX( a, b ) ( ( a > b) ? a : b )
+#define EXPERIMENT_TIME 60
 
 
 // I truly hate C.
@@ -116,7 +117,7 @@ writer(void *args)
                         newlc = MAX(wa->lc->num, curr->val) + 1;
                         wa->lc->num = newlc;
                         pthread_mutex_unlock(&wa->lc->mutex);
-                        printf("[VM %d | time: %u, lc:%d] Message received, Queue still has %d messages\n", wa->vmnum, (unsigned)time(NULL), newlc, total_on_queue);
+                        printf("[VM%d | time: %u, lc:%d] Message received, Queue still has %d messages\n", wa->vmnum, (unsigned)time(NULL), newlc, total_on_queue);
                         free(curr);
                 } else {
                         pthread_mutex_unlock(&wa->queue->mutex);
@@ -128,7 +129,7 @@ writer(void *args)
                                         pthread_mutex_unlock(&wa->lc->mutex);
 
                                         write(wa->send_queue_1, &newlc, sizeof(int));
-                                        printf("[VM %d | time: %u, lc:%d] Sent message to 1\n", wa->vmnum, (unsigned)time(NULL), newlc);
+                                        printf("[VM%d | time: %u, lc:%d] Sent message to 1\n", wa->vmnum, (unsigned)time(NULL), newlc);
 
                                         break;
                                 case 1:
@@ -137,7 +138,7 @@ writer(void *args)
                                         pthread_mutex_unlock(&wa->lc->mutex);
 
                                         write(wa->send_queue_2, &newlc, sizeof(int));
-                                        printf("[VM %d | time: %u, lc:%d] Sent message to 2\n", wa->vmnum, (unsigned)time(NULL), newlc);
+                                        printf("[VM%d | time: %u, lc:%d] Sent message to 2\n", wa->vmnum, (unsigned)time(NULL), newlc);
 
                                         break;
                                 case 2:
@@ -147,14 +148,14 @@ writer(void *args)
 
                                         write(wa->send_queue_1, &newlc, sizeof(int));
                                         write(wa->send_queue_2, &newlc, sizeof(int));
-                                        printf("[VM %d | time: %u, lc:%d] Sent message to both\n", wa->vmnum, (unsigned)time(NULL), newlc);
+                                        printf("[VM%d | time: %u, lc:%d] Sent message to both\n", wa->vmnum, (unsigned)time(NULL), newlc);
 
                                         break;
                                 default:
                                         pthread_mutex_lock(&wa->lc->mutex);
                                         newlc = wa->lc->num;
                                         pthread_mutex_unlock(&wa->lc->mutex);
-                                        printf("[VM %d | time: %u, lc:%d] Internal event\n", wa->vmnum, (unsigned)time(NULL), newlc);
+                                        printf("[VM%d | time: %u, lc:%d] Internal event\n", wa->vmnum, (unsigned)time(NULL), newlc);
                         }
 
                         // increment the logical clock
@@ -215,8 +216,11 @@ VM(int vmnum, int clockspeed, int listen_queue, int send_queue_1, int send_queue
                 assert(-1 != pthread_create(&t1, NULL, reader, (void *)&r));
                 assert(-1 != pthread_create(&t2, NULL, writer, (void *)&w));
 
-                pthread_join(t1, NULL);
-                pthread_join(t2, NULL);
+                // sleep for a minute
+                sleep(EXPERIMENT_TIME);
+
+                pthread_kill(t1, SIGINT);
+                pthread_kill(t2, SIGINT);
 
                 // never return
                 exit(0);
@@ -233,6 +237,9 @@ VM(int vmnum, int clockspeed, int listen_queue, int send_queue_1, int send_queue
 int
 main(void)
 {
+
+        setbuf(stdout, NULL);
+        srand(time(NULL) + getpid());
 
         // Create queues, [0] for reading and [1] for writing
         int vm1_pipe[2];
